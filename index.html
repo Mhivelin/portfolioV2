@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="d-flex">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark flex-column" id="sidebar">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/about.png" alt="Profile Picture" class="profile-picture">
+                Marius Hivelin
+            </a>
+            <div class="collapse navbar-collapse show" id="navbarNav">
+                <ul class="navbar-nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="content-container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8 text-content">
+                        <section id="about">
+                            <h1>Bienvenue sur mon portfolio</h1>
+                            <p>Je suis Marius Hivelin, un développeur passionné par .</p>
+                        </section>
+                        <section id="projects">
+                            <h2>Mes Projets</h2>
+                            <div class="project">
+                                <h3>Projet 1</h3>
+                                <p>Description du projet 1.</p>
+                            </div>
+                            <div class="project">
+                                <h3>Projet 2</h3>
+                                <p>Description du projet 2.</p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-md-4 code-container">
+                        <pre><code id="code-display"></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-dark text-white text-center">
+        <p>&copy; 2024 Mon Portfolio</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+        const codeDisplay = document.getElementById('code-display');
+
+
+
+
+
+        const codeLines = [
+            'public class Program {',
+            '    public static void Main(string[] args) {',
+            '        System.Console.WriteLine("Hello, World!");',
+            '    }',
+            '}'
+
+        ];
+
+        let currentLine = 0;
+        let currentChar = 0;
+
+        function typeCode() {
+            if (currentLine < codeLines.length) {
+                const line = codeLines[currentLine];
+                if (currentChar < line.length) {
+                    codeDisplay.innerHTML += line[currentChar++];
+                    setTimeout(typeCode, 100); // vitesse de frappe
+                } else {
+                    codeDisplay.innerHTML += '\n';
+                    currentLine++;
+                    currentChar = 0;
+                    setTimeout(typeCode, 500);
+                }
+            } else {
+                codeDisplay.innerHTML += '<span class="cursor"></span>';
+            }
+        }
+
+        typeCode();
+    </script>
+</body>
+
+</html>
