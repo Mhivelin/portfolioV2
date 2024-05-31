@@ -7,6 +7,7 @@
     <title>Mon Portfolio</title>
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
 </head>
 
 <body>
@@ -26,6 +27,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#excel">Document Excel</a>
                     </li>
                 </ul>
             </div>
@@ -50,6 +54,10 @@
                                 <p>Description du projet 2.</p>
                             </div>
                         </section>
+                        <section id="excel">
+                            <h2>Document Excel</h2>
+                            <table id="excel-table" class="table table-striped"></table>
+                        </section>
                     </div>
                     <div class="col-md-4 code-container">
                         <pre><code id="code-display"></code></pre>
@@ -63,49 +71,10 @@
         <p>&copy; 2024 Mon Portfolio</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="assets/scripts.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-    <script>
-        const codeDisplay = document.getElementById('code-display');
-
-
-
-
-
-        const codeLines = [
-            'public class Program {',
-            '    public static void Main(string[] args) {',
-            '        System.Console.WriteLine("Hello, World!");',
-            '    }',
-            '}'
-
-        ];
-
-        let currentLine = 0;
-        let currentChar = 0;
-
-        function typeCode() {
-            if (currentLine < codeLines.length) {
-                const line = codeLines[currentLine];
-                if (currentChar < line.length) {
-                    codeDisplay.innerHTML += line[currentChar++];
-                    setTimeout(typeCode, 100); // vitesse de frappe
-                } else {
-                    codeDisplay.innerHTML += '\n';
-                    currentLine++;
-                    currentChar = 0;
-                    setTimeout(typeCode, 500);
-                }
-            } else {
-                codeDisplay.innerHTML += '<span class="cursor"></span>';
-            }
-        }
-
-        typeCode();
-    </script>
 </body>
 
 </html>

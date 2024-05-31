@@ -61,17 +61,22 @@ html {
 
 .code-container {
     background-color: #1e1e1e;
+    /* Couleur de fond noire */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: #fff;
+    color: #ffffff;
+    /* Couleur de texte blanche */
     font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    /* Taille de police augmentée */
     white-space: pre-wrap;
 }
 
-pre {
+pre,
+code {
     margin: 0;
-    color: #fff;
+    color: #ffffff;
     /* Texte en blanc */
 }
 
