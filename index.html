@@ -7,7 +7,7 @@
     <title>Mon Portfolio</title>
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -25,11 +25,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#projects">Projets</a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bts-sio">BTS SIO</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#excel">Document Excel</a>
+                        <a class="nav-link" href="#tableau">Tableau de synthese</a>
                     </li>
                 </ul>
             </div>
@@ -40,27 +44,671 @@
                 <div class="row">
                     <div class="col-md-8 text-content">
                         <section id="about">
-                            <h1>Bienvenue sur mon portfolio</h1>
-                            <p>Je suis Marius Hivelin, un développeur passionné par .</p>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h1 class="card-title">Bienvenue sur mon portfolio</h1>
+                                    <p class="card-text">Je suis Marius Hivelin, étudiant en deuxième année de BTS SIO (Services Informatiques aux
+                                        Organisations) au lycée Fénelon notre Dame à La Rochelle. Ce portfolio a pour objectif de
+                                        présenter mes compétences, mes projets, et mon parcours professionnel.</p>
+                                    <h3 class="card-subtitle">Télécharger mon cv</h3>
+                                    <a href="assets/cv/CV_2023-01-06_Marius_Hivelin.pdf" download="CV_Marius_Hivelin">Télécharger mon CV</a>
+                                </div>
+                            </div>
                         </section>
                         <section id="projects">
-                            <h2>Mes Projets</h2>
-                            <div class="project">
-                                <h3>Projet 1</h3>
-                                <p>Description du projet 1.</p>
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card mb-3">
+                                            <div class="card-header">
+                                                Audit de Sécurité et du Site Web de Deltic
+                                            </div>
+                                            <div class="card-body"
+                                                style="background-image: url(assets/img/audit_secu.jpg); background-size: cover;">
+                                                <div class="text-center"></div>
+                                                <span class="badge badge-secondary">Gérer le patrimoine informatique</span>
+                                                <span class="badge badge-secondary">Répondre aux incidents et aux demandes d’assistance et d’évolution</span>
+                                                <span class="badge badge-secondary">Développer la présence en ligne de l’organisation</span>
+                                                <span class="badge badge-secondary">Travailler en mode projet</span>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#project1Modal">
+                                                    Détails du Projet
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card mb-3">
+                                            <div class="card-header">
+                                                Application passerelle comptable DELTIC
+                                            </div>
+                                            <div class="card-body"
+                                                style="background-image: url(assets/img/logo-deltic.jpg); background-size: cover;">
+                                                <div class="text-center"></div>
+                                                <span class="badge badge-secondary">Gérer le patrimoine informatique</span>
+                                                <span class="badge badge-secondary">Répondre aux incidents et aux demandes d’assistance et d’évolution</span>
+                                                <span class="badge badge-secondary">Travailler en mode projet</span>
+                                                <span class="badge badge-secondary">Mettre à disposition des utilisateurs un service informatique</span>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#project2Modal">
+                                                    Détails du Projet
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card mb-3">
+                                            <div class="card-header">
+                                                Création de mon Portfolio
+                                            </div>
+                                            <div class="card-body"
+                                                style="background-image: url(assets/img/portfolio.jpg); background-size: cover;">
+                                                <div class="text-center"></div>
+                                                <span class="badge badge-secondary">Gérer le patrimoine informatique</span>
+                                                <span class="badge badge-secondary">Mettre à disposition des utilisateurs un service informatique</span>
+                                                <span class="badge badge-secondary">Organiser son développement professionnel</span>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#project3Modal">
+                                                    Détails du Projet
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card mb-3">
+                                            <div class="card-header">
+                                                Formulaire de la LPO
+                                            </div>
+                                            <div class="card-body"
+                                                style="background-image: url(assets/img/form_lpo.jpg); background-size: cover;">
+                                                <div class="text-center"></div>
+                                                <span class="badge badge-secondary">Gérer le patrimoine informatique</span>
+                                                <span class="badge badge-secondary">Mettre à disposition des utilisateurs un service informatique</span>
+                                                <span class="badge badge-secondary">Organiser son développement professionnel</span>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#project4Modal">
+                                                    Détails du Projet
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
                             </div>
-                            <div class="project">
-                                <h3>Projet 2</h3>
-                                <p>Description du projet 2.</p>
+
+                            <div class="modal fade" id="project1Modal" tabindex="-1"
+                                aria-labelledby="project1ModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="project1ModalLabel">Audit de Sécurité et du Site
+                                                Web de Deltic</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p><strong>Description du Projet :</strong> Dans le cadre de mon alternance
+                                                chez Deltic, j'ai réalisé un
+                                                audit de sécurité de l'entreprise et du site web de l'organisation (<a
+                                                    href="https://deltic.fr">https://deltic.fr</a>) et contribué au
+                                                développement de sa présence en
+                                                ligne.</p>
+                                            <p><strong>Actions Menées :</strong></p>
+                                            <ul>
+                                                <li>Réalisation d'un audit de sécurité complet utilisant les outils
+                                                    WPScan, Nikto, et nmap pour
+                                                    identifier les vulnérabilités potentielles.</li>
+                                                <li>Analyse des résultats de WPScan :
+                                                    <ul>
+                                                        <li>PHP 7.4 et WordPress 6.4.2 étaient à jour et sécurisés.</li>
+                                                        <li>Identification de plugins nécessitant une mise à jour :
+                                                            contact-form-7 (5.8.4 à mettre à
+                                                            jour vers 5.8.5), wpcf7-redirect (3.0.1 à mettre à jour vers
+                                                            3.1.2).</li>
+                                                        <li>Vérification de l'état des fichiers robots.txt et XML-RPC.
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>Utilisation de Nikto pour détecter des problèmes comme des cookies
+                                                    sans drapeaux sécurisés, des
+                                                    en-têtes révélateurs, et des adresses IP dans les cookies.</li>
+                                                <li>Utilisation de nmap pour une analyse approfondie des services et des
+                                                    ports ouverts.</li>
+                                                <li>Recommandations et actions correctives basées sur les résultats de
+                                                    l'audit, notamment la mise à
+                                                    jour des plugins et l'amélioration des configurations de sécurité.
+                                                </li>
+                                            </ul>
+                                            <p><strong>Utilisation de Monday.com pour la Gestion de Projet :</strong>
+                                            </p>
+                                            <ul>
+                                                <li>Planification et définition des objectifs du projet en collaboration
+                                                    avec les différentes
+                                                    parties prenantes.</li>
+                                                <li>Utilisation de Monday.com pour créer un calendrier de projet
+                                                    détaillé avec des échéances claires
+                                                    pour chaque tâche.</li>
+                                                <li>Organisation des tâches et assignation des responsabilités à chaque
+                                                    membre de l'équipe.</li>
+                                                <li>Suivi de l'avancement du projet en temps réel et ajustement des
+                                                    plans en fonction des retours et
+                                                    des obstacles rencontrés.</li>
+                                                <li>Communication régulière avec l'équipe via Monday.com pour assurer la
+                                                    transparence et la
+                                                    collaboration.</li>
+                                            </ul>
+                                            <p><strong>Compétences Développées :</strong></p>
+                                            <ul>
+                                                <li>Gérer le patrimoine informatique : Identification et résolution des
+                                                    vulnérabilités
+                                                    pour sécuriser les actifs de l'entreprise.</li>
+                                                <li>Répondre aux incidents et aux demandes d’assistance et d’évolution :
+                                                    Analyse et
+                                                    correction des problèmes de sécurité identifiés.</li>
+                                                <li>Développer la présence en ligne de l’organisation : Amélioration et
+                                                    mise à jour du
+                                                    site web pour renforcer la sécurité et la fiabilité.</li>
+                                                <li>Travailler en mode projet : Gestion du projet d'audit de sécurité en
+                                                    utilisant
+                                                    Monday.com.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Fermer</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </section>
-                        <section id="excel">
-                            <h2>Document Excel</h2>
-                            <table id="excel-table" class="table table-striped"></table>
-                        </section>
+
+                            <div class="modal fade" id="project2Modal" tabindex="-1"
+                                aria-labelledby="project2ModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="project2ModalLabel">Plateforme applicative de la
+                                                passerelle
+                                                comptable DELTIC
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p><strong>Description du Projet :</strong> Dans le cadre de mon stage chez
+                                                DELTIC, j'ai
+                                                développé une
+                                                plateforme applicative pour la passerelle comptable de DELTIC. Cette
+                                                plateforme vise à
+                                                automatiser
+                                                et faciliter la gestion des transferts de données comptables entre
+                                                différents logiciels.
+                                            </p>
+
+                                            <p><strong>Contexte et Objectifs :</strong> L’entreprise DELTIC revend des
+                                                logiciels de
+                                                comptabilité et
+                                                de dématérialisation à ses clients, qui devaient auparavant transférer
+                                                manuellement les
+                                                informations
+                                                entre logiciels. Le projet visait à développer une passerelle
+                                                automatisée pour
+                                                simplifier ces
+                                                transferts et améliorer la gestion des clients et des passerelles.</p>
+
+                                            <p><strong>Actions Menées :</strong></p>
+                                            <ul>
+                                                <li>Conception et développement de la plateforme en utilisant Docker,
+                                                    Visual Studio
+                                                    Code, et
+                                                    Looping.</li>
+                                                <li>Utilisation des APIs de Zeendoc et EBP pour l'intégration des
+                                                    fonctionnalités de
+                                                    passerelle.
+                                                </li>
+                                                <li>Création d'une base de données pour gérer les clients, les
+                                                    logiciels, et les
+                                                    passerelles.</li>
+                                                <li>Mise en place des tests unitaires pour assurer la fiabilité du
+                                                    système.</li>
+                                            </ul>
+
+                                            <p><strong>Compétences Développées :</strong></p>
+                                            <ul>
+                                                <li>Gérer le patrimoine informatique : Mise en place d'une base de
+                                                    données pour
+                                                    centraliser et gérer les informations des clients et des
+                                                    passerelles.</li>
+                                                <li>Répondre aux incidents et aux demandes d’assistance et d’évolution :
+                                                    Mise en œuvre
+                                                    de tests unitaires et de solutions de dépannage pour garantir la
+                                                    continuité des
+                                                    services.</li>
+                                                <li>Travailler en mode projet : Planification, développement et suivi du
+                                                    projet en
+                                                    collaboration avec l'équipe, en utilisant des outils de gestion de
+                                                    projet.</li>
+                                                <li>Mettre à disposition des utilisateurs un service informatique :
+                                                    Développement d'une
+                                                    plateforme intuitive et sécurisée pour automatiser les transferts de
+                                                    données
+                                                    comptables.</li>
+                                            </ul>
+
+                                            <p><strong>Technologies Utilisées :</strong></p>
+                                            <ul>
+                                                <li>Serveur Debian OVH</li>
+                                                <li>Docker</li>
+                                                <li>Visual Studio Code</li>
+                                                <li>Looping</li>
+                                                <li>C#</li>
+                                                <li>Python</li>
+                                            </ul>
+
+                                            <p><strong>Ressources Documentaires :</strong></p>
+                                            <ul>
+                                                <li>Documentation API Zeendoc</li>
+                                                <li>Documentation API EBP</li>
+                                                <li>Documentation Flask</li>
+                                            </ul>
+
+                                            <p><strong>Résultats Obtenus :</strong></p>
+                                            <ul>
+                                                <li>Automatisation du transfert des informations de paiement entre les
+                                                    logiciels EBP et
+                                                    Zeendoc.
+                                                </li>
+                                                <li>Amélioration de la gestion des clients et des passerelles pour
+                                                    l'entreprise Deltic.
+                                                </li>
+                                                <li>Mise en place d'une interface utilisateur intuitive et sécurisée.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Fermer</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal fade" id="project3Modal" tabindex="-1"
+                                aria-labelledby="project3ModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="project3ModalLabel">Création de mon Portfolio
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p><strong>Description du Projet :</strong> Ce projet consiste à concevoir
+                                                et développer mon propre
+                                                portfolio en ligne pour présenter mes compétences, mes projets et mon
+                                                parcours professionnel.</p>
+
+                                            <p><strong>Contexte et Objectifs :</strong> En tant qu'étudiant en BTS SIO,
+                                                il est essentiel de
+                                                démontrer mes compétences en développement web et en gestion de projets.
+                                                La création de ce portfolio
+                                                vise à offrir une vitrine professionnelle en ligne pour attirer des
+                                                employeurs potentiels et des
+                                                opportunités de stage.</p>
+
+                                            <p><strong>Actions Menées :</strong></p>
+                                            <ul>
+                                                <li>Conception de l'architecture et de l'interface utilisateur du site
+                                                    en utilisant des outils de
+                                                    wireframing et de prototypage.</li>
+                                                <li>Développement du site en utilisant HTML, CSS, et JavaScript pour
+                                                    créer une interface utilisateur
+                                                    dynamique et responsive.</li>
+                                                <li>Intégration de Bootstrap pour assurer une mise en page cohérente et
+                                                    adaptative sur différents
+                                                    appareils.</li>
+                                                <li>Utilisation de Git pour le versionnement du code et la gestion des
+                                                    modifications.</li>
+                                            </ul>
+
+                                            <p><strong>Compétences Développées :</strong></p>
+                                            <ul>
+                                                <li>Gérer le patrimoine informatique : Organisation et gestion des
+                                                    fichiers et des ressources
+                                                    utilisées pour le développement du portfolio.</li>
+                                                <li>Mettre à disposition des utilisateurs un service informatique :
+                                                    Développement d'un site web
+                                                    accessible et fonctionnel pour présenter mes compétences et projets.
+                                                </li>
+                                                <li>Organiser son développement professionnel : Création d'une
+                                                    plateforme personnelle pour améliorer
+                                                    ma visibilité et attirer des opportunités professionnelles.</li>
+                                            </ul>
+
+                                            <p><strong>Technologies Utilisées :</strong></p>
+                                            <ul>
+                                                <li>HTML</li>
+                                                <li>CSS</li>
+                                                <li>JavaScript</li>
+                                                <li>Bootstrap</li>
+                                                <li>Git</li>
+                                            </ul>
+
+                                            <p><strong>Ressources Documentaires :</strong></p>
+                                            <ul>
+                                                <li>Documentation Bootstrap</li>
+                                                <li>MDN Web Docs pour HTML, CSS, et JavaScript</li>
+                                                <li>GitHub pour le versionnement et la collaboration</li>
+                                            </ul>
+
+                                            <p><strong>Résultats Obtenus :</strong></p>
+                                            <ul>
+                                                <li>Création d'un portfolio en ligne professionnel et attractif.</li>
+                                                <li>Amélioration de mes compétences en développement web et en design
+                                                    d'interface utilisateur.</li>
+                                                <li>Développement d'une meilleure compréhension des processus de gestion
+                                                    de projet.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Fermer</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal fade" id="project4Modal" tabindex="-1"
+                                aria-labelledby="project4ModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="project4ModalLabel">Formulaire de la LPO</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p><strong>Description du Projet :</strong> Création d'un formulaire web
+                                                permettant de faire des demandes
+                                                d'engagement de paiement pour les employés de la LPO. Le formulaire
+                                                récupère des champs à sélectionner
+                                                dans une base de données. L'utilisateur doit entrer les informations et,
+                                                s'il le souhaite, ajouter des
+                                                devis. Le formulaire génère ensuite un PDF unique avec toutes les
+                                                informations ainsi que la
+                                                concaténation des devis.</p>
+
+                                            <p><strong>Actions Menées :</strong></p>
+                                            <ul>
+                                                <li>Création du formulaire web en utilisant PHP, JavaScript, HTML et
+                                                    CSS.</li>
+                                                <li>Connexion du formulaire à la base de données pour récupérer et
+                                                    afficher les champs nécessaires.
+                                                </li>
+                                                <li>Gestion de l'ajout des devis par les utilisateurs.</li>
+                                                <li>Génération d'un PDF unique avec toutes les informations du
+                                                    formulaire et les devis concaténés.
+                                                </li>
+                                                <li>Tests approfondis pour assurer le bon fonctionnement du formulaire
+                                                    et la génération du PDF.</li>
+                                                <li>Rédaction de la documentation pour l'utilisation et la maintenance
+                                                    du formulaire.</li>
+                                            </ul>
+
+                                            <p><strong>Compétences Développées :</strong></p>
+                                            <ul>
+                                                <li>Gérer le patrimoine informatique : Gestion des données des
+                                                    utilisateurs et des devis dans une base
+                                                    de données.</li>
+                                                <li>Mettre à disposition des utilisateurs un service informatique :
+                                                    Développement d'un formulaire web
+                                                    fonctionnel et utile pour les employés de la LPO.</li>
+                                                <li>Organiser son développement professionnel : Développement de
+                                                    compétences en PHP, JavaScript, HTML,
+                                                    CSS et génération de PDF.</li>
+                                            </ul>
+
+                                            <p><strong>Technologies Utilisées :</strong></p>
+                                            <ul>
+                                                <li>PHP</li>
+                                                <li>JavaScript</li>
+                                                <li>HTML</li>
+                                                <li>CSS</li>
+                                                <li>MySQL</li>
+                                                <li>FPDF (ou une autre bibliothèque PHP pour la génération de PDF)</li>
+                                            </ul>
+
+                                            <p><strong>Résultats Obtenus :</strong></p>
+                                            <ul>
+                                                <li>Formulaire web fonctionnel pour les demandes d'engagement de
+                                                    paiement.</li>
+                                                <li>Génération automatique de PDF avec les informations et les devis
+                                                    concaténés.</li>
+                                                <li>Satisfaction des utilisateurs grâce à un processus simplifié et
+                                                    automatisé.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Fermer</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <section id="bts-sio">
+                                <h2>Présentation du BTS SIO</h2>
+                                <div id="accordion">
+                                    <div class="card">
+                                        <div class="card-header" id="headingOne">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">
+                                                    Définition du BTS SIO
+                                                </button>
+                                            </h5>
+                                        </div>
+
+                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                            <div class="card-body">
+                                                Le Brevet de Technicien Supérieur Services Informatiques aux Organisations
+                                                (BTS SIO) est une formation de deux ans après le baccalauréat, qui forme des
+                                                techniciens supérieurs en informatique capables de répondre aux besoins des
+                                                entreprises en matière de systèmes d'information.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingTwo">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                                    aria-expanded="false" aria-controls="collapseTwo">
+                                                    Objectifs de la Formation
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                            <div class="card-body">
+                                                La formation vise à développer des compétences en analyse, développement,
+                                                gestion et maintenance des systèmes informatiques. Les diplômés sont
+                                                préparés à intervenir dans divers contextes professionnels, allant des PME
+                                                aux grandes entreprises, et à travailler sur des projets variés allant de la
+                                                simple assistance technique à la gestion de projets informatiques complexes.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingThree">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                                    aria-expanded="false" aria-controls="collapseThree">
+                                                    Options du BTS SIO
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                            <div class="card-body">
+                                                <h6 class="card-subtitle mb-2 text-muted">SLAM (Solutions Logicielles et
+                                                    Applications Métiers)</h6>
+                                                <p>Cette option se concentre sur le développement d'applications
+                                                    informatiques adaptées aux besoins des utilisateurs. Les étudiants
+                                                    apprennent à concevoir, développer et maintenir des logiciels et des
+                                                    applications.</p>
+                                                <h6 class="card-subtitle mb-2 text-muted">SISR (Solutions d'Infrastructure,
+                                                    Systèmes et Réseaux)</h6>
+                                                <p>Cette option met l'accent sur l'installation, la maintenance et la
+                                                    sécurisation des réseaux et des systèmes informatiques. Les étudiants
+                                                    sont formés à gérer l'infrastructure informatique d'une organisation.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingFour">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                                                    aria-expanded="false" aria-controls="collapseFour">
+                                                    Contenu et Programme de la Formation
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                            <div class="card-body">
+                                                Les étudiants suivent des cours en algorithmique, programmation, gestion de
+                                                bases de données, réseaux, systèmes d'exploitation, et sécurité
+                                                informatique. Des projets pratiques et des stages en entreprise permettent
+                                                d'appliquer les connaissances théoriques et de développer des compétences
+                                                pratiques.
+                                                <h6 class="card-subtitle mb-2 text-muted">Projets et Stages</h6>
+                                                <p>Les projets et les stages sont des éléments essentiels du BTS SIO. Ils
+                                                    permettent aux étudiants de mettre en pratique leurs compétences dans
+                                                    des situations réelles. Les stages offrent une expérience
+                                                    professionnelle précieuse et une opportunité de se familiariser avec le
+                                                    monde du travail.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingFive">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                                                    aria-expanded="false" aria-controls="collapseFive">
+                                                    Compétences Développées
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                                            <div class="card-body">
+                                                <h6 class="card-subtitle mb-2 text-muted">Compétences Techniques</h6>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item">Programmation (Java, C#, Python, etc.)</li>
+                                                    <li class="list-group-item">Administration de bases de données (SQL)
+                                                    </li>
+                                                    <li class="list-group-item">Gestion des réseaux (configuration,
+                                                        sécurisation)</li>
+                                                    <li class="list-group-item">Maintenance et support technique</li>
+                                                </ul>
+                                                <h6 class="card-subtitle mb-2 text-muted">Compétences Transversales</h6>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item">Gestion de projet</li>
+                                                    <li class="list-group-item">Communication et travail en équipe</li>
+                                                    <li class="list-group-item">Analyse et résolution de problèmes</li>
+                                                    <li class="list-group-item">Adaptabilité et apprentissage continu</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingSix">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"
+                                                    aria-expanded="false" aria-controls="collapseSix">
+                                                    Débouchés Professionnels
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                                            <div class="card-body">
+                                                <h6 class="card-subtitle mb-2 text-muted">Métiers Visés</h6>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item">Développeur d’applications</li>
+                                                    <li class="list-group-item">Administrateur réseaux et systèmes</li>
+                                                    <li class="list-group-item">Technicien de maintenance informatique</li>
+                                                    <li class="list-group-item">Chargé de support technique</li>
+                                                </ul>
+                                                <h6 class="card-subtitle mb-2 text-muted">Poursuites d’Études</h6>
+                                                <p class="card-text">Après un BTS SIO, il est possible de poursuivre des
+                                                    études en licence professionnelle, en école d'ingénieurs, ou en master
+                                                    dans des domaines spécialisés en informatique.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingSeven">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven"
+                                                    aria-expanded="false" aria-controls="collapseSeven">
+                                                    Exemples de Réalisations
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                                            <div class="card-body">
+                                                <div class="project mb-2">
+                                                    <h6 class="card-subtitle mb-2 text-muted">Projet de Développement Web
+                                                    </h6>
+                                                    <p class="card-text">Description détaillée du projet de développement
+                                                        web, les technologies utilisées, et les résultats obtenus.</p>
+                                                </div>
+                                                <div class="project mb-2">
+                                                    <h6 class="card-subtitle mb-2 text-muted">Projet de Gestion de Réseau
+                                                    </h6>
+                                                    <p class="card-text">Description détaillée du projet de gestion de
+                                                        réseau, les outils utilisés, et les solutions mises en place.</p>
+                                                </div>
+                                                <div class="project mb-2">
+                                                    <h6 class="card-subtitle mb-2 text-muted">Projet de Sécurité
+                                                        Informatique</h6>
+                                                    <p class="card-text">Description détaillée du projet de sécurité
+                                                        informatique, les défis rencontrés, et les mesures de sécurité
+                                                        implémentées.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="contact">
+                                <h2>Contact</h2>
+                                <p>Vous pouvez me contacter via les informations ci-dessous :</p>
+                                <ul>
+                                    <li>Email : marius.hivelin@gmail.com</li>
+                                    <li>Téléphone : 06 58 36 65 39</li>
+                                </ul>
+                            </section>
+                            <section id="tableau">
+                                <h2>Tableau de synthese</h2>
+                                <p>Télécharger le document Excel : <a
+                                        href="assets/excel/Tableau_de_synthese_-_Epreuve_E4_-_BTS_SIO_2023.xlsx">Tableau de synthese</a>
+                                </p>
+
+                            </section>
                     </div>
                     <div class="col-md-4 code-container">
-                        <pre><code id="code-display"></code></pre>
+                        <pre><code id="code-display" class="language-csharp"></code></pre>
                     </div>
                 </div>
             </div>
@@ -68,13 +716,16 @@
     </div>
 
     <footer class="footer mt-auto py-3 bg-dark text-white text-center">
-        <p>&copy; 2024 Mon Portfolio</p>
+        <p>&copy; 2024 Portfolio de Marius Hivelin</p>
     </footer>
 
-    <script src="assets/scripts.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+    <script src="assets/scripts.js"></script>
 </body>
 
 </html>

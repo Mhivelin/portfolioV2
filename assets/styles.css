@@ -1,5 +1,3 @@
-/* styles.css */
-
 body,
 html {
     height: 100%;
@@ -27,7 +25,6 @@ html {
 
 .profile-picture {
     width: 100px;
-    /* Ajustez la taille selon vos besoins */
     height: 100px;
     border-radius: 50%;
     margin-bottom: 10px;
@@ -36,7 +33,6 @@ html {
     margin-left: auto;
     margin-right: auto;
     border: 2px solid #fff;
-    /* Optionnel : bordure blanche pour meilleure visibilité */
 }
 
 .navbar-brand {
@@ -59,39 +55,25 @@ html {
     margin-right: 20px;
 }
 
+pre,
+code {
+    margin: 0;
+    padding: 10px;
+    overflow: auto;
+    white-space: pre;
+    word-wrap: normal;
+    background-color: #282c34;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+}
+
 .code-container {
-    background-color: #1e1e1e;
-    /* Couleur de fond noire */
+    background-color: #282c34;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: #ffffff;
-    /* Couleur de texte blanche */
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.2em;
-    /* Taille de police augmentée */
-    white-space: pre-wrap;
-}
-
-pre,
-code {
-    margin: 0;
-    color: #ffffff;
-    /* Texte en blanc */
-}
-
-.cursor {
-    display: inline-block;
-    width: 10px;
-    height: 20px;
-    background-color: #fff;
-    animation: blink 0.7s steps(1) infinite;
-}
-
-@keyframes blink {
-    50% {
-        background-color: transparent;
-    }
 }
 
 .footer {
@@ -102,4 +84,37 @@ code {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+}
+
+.skills-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f8f9fa;
+}
+
+.block {
+    position: absolute;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 1.5em;
+    font-size: 1em;
+    white-space: nowrap;
+    max-width: calc(100% - 20px);
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    background-color: #000;
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        background-color: transparent;
+    }
 }
